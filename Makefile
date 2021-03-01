@@ -7,9 +7,9 @@ init:
 deploy: init
 	@echo "====> deploying to github"
 	mdbook build
-	rm -rf /tmp/book/*
-	cp -rp book/* /tmp/book/
+	rm -rf /tmp/book
+	cp -rp book /tmp/book/
 	cd /tmp/book && \
 		git add -A && \
-		git commit -m "deployed on $(shell date) by ${USER}" && \
+		git commit -m "deployed on $(date) by ${USER}" && \
 		git push -f origin gh-pages
