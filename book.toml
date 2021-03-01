@@ -1,0 +1,25 @@
+[book]
+authors = ["lencx"]
+language = "zh_CN"
+multilingual = false
+src = "src"
+title = "lencx's book"
+
+# https://github.com/lzanini/mdbook-katex
+[preprocessor.katex]
+
+# https://github.com/badboy/mdbook-mermaid
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+# [build]
+# build-dir = "dist"
+
+[output.html]
+default-theme = "rust"
+git-repository-url = "https://github.com/lencx/book"
+additional-js = ["./plugins/mermaid.min.js", "./plugins/mermaid.init.js"]
+
+[output.html.playground]
+editable = true
+copy-js = true
