@@ -2,7 +2,7 @@
 
 set -e
 
-mdbook
+mdbook build
 
 cd book
 
