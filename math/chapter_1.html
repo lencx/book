@@ -165,29 +165,30 @@
 
                 <div id="content" class="content">
                     <main style="min-height: 48vh">
-                        <h1><a class="header" href="#chapter-1" id="chapter-1">Chapter 1</a></h1>
-<p>Here is an inline example, $ \pi(\theta) $,</p>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
+<p>Here is an inline example, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span>,</p>
 <p>an equation,</p>
-<p>$$ \nabla f(x) \in \mathbb{R}^n, $$</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∇</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.9088319999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">R</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7143919999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mpunct">,</span></span></span></span></span></p>
 <p>and a regular $ symbol.</p>
-<pre><pre class="playground"><code class="language-rust">fn main() {
+<pre><pre class="playground"><code class="language-rust editable edition2018">fn main() {
   println!(&quot;hello book&quot;);
 }
 </code></pre></pre>
-<pre><code class="language-mermaid">graph TD;
+<pre class="mermaid">graph TD;
     A--&gt;B;
     A--&gt;C;
     B--&gt;D;
     C--&gt;D;
-</code></pre>
-<pre><code class="language-mermaid">graph LR;
+</pre>
+<pre class="mermaid">graph LR;
     A--&gt; B &amp; C &amp; D;
     B--&gt; A &amp; E;
     C--&gt; A &amp; E;
     D--&gt; A &amp; E;
     E--&gt; B &amp; C &amp; D;
 
-</code></pre>
+</pre>
 
                     </main>
 
@@ -253,6 +254,10 @@
         
 
         
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+        
 
         
         <script type="text/javascript">
@@ -280,9 +285,9 @@
 
         <!-- Custom JS scripts -->
         
-        <script type="text/javascript" src=".././plugins/mermaid.min.js"></script>
+        <script type="text/javascript" src="../plugins/mermaid.min.js"></script>
         
-        <script type="text/javascript" src=".././plugins/mermaid.init.js"></script>
+        <script type="text/javascript" src="../plugins/mermaid.init.js"></script>
         
 
         
