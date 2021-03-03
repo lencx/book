@@ -16,7 +16,7 @@ jobs:
         with:
           mdbook-version: '0.4.7'
           # mdbook-version: 'latest'
-
+      - run: cargo install mdbook-katex mdbook-mermaid
       - run: mdbook build
 
       - name: Deploy
