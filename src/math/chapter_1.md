@@ -8,7 +8,7 @@ $$ \nabla f(x) \in \mathbb{R}^n, $$
 
 and a regular \$ symbol.
 
-```rust
+```rust,editable
 fn main() {
   println!("hello book");
 }

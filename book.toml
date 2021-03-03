@@ -1,9 +1,9 @@
 [book]
+title = "浮之静"
 authors = ["lencx"]
 language = "zh_CN"
 multilingual = false
 src = "src"
-title = "浮之静"
 
 # https://github.com/lzanini/mdbook-katex
 [preprocessor.katex]
@@ -12,15 +12,11 @@ title = "浮之静"
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
 
-# [build]
-# build-dir = "dist"
-
 [output.html]
 theme = "lencx"
 default-theme = "rust"
 google-analytics = "UA-76982222-5"
 git-repository-url = "https://github.com/lencx/book"
-git-repository-icon = "fa-github"
 additional-js = ["./plugins/mermaid.min.js", "./plugins/mermaid.init.js"]
 
 [output.html.playground]
