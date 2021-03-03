@@ -5,6 +5,9 @@ language = "zh_CN"
 multilingual = false
 src = "src"
 
+[rust]
+edition = "2018"
+
 # https://github.com/lzanini/mdbook-katex
 [preprocessor.katex]
 
@@ -22,6 +25,7 @@ additional-js = ["./plugins/mermaid.min.js", "./plugins/mermaid.init.js"]
 [output.html.playground]
 editable = true
 copy-js = true
+line-numbers = true
 
 [output.html.search]
 enable = true
