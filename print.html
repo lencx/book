@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">序</a></li><li class="chapter-item expanded "><a href="rust/toc.html"><strong aria-hidden="true">1.</strong> Rust</a></li><li class="chapter-item expanded "><a href="math/toc.html"><strong aria-hidden="true">2.</strong> Math</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="math/chapter_1.html"><strong aria-hidden="true">2.1.</strong> 测试</a></li></ol></li><li class="chapter-item expanded "><a href="wasm/toc.html"><strong aria-hidden="true">3.</strong> WebAssembly</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="wasm/rust_wasm_frontend.html"><strong aria-hidden="true">3.1.</strong> 前端入门 | Rust 和 WebAssembly</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">序</a></li><li class="chapter-item expanded "><a href="rust/toc.html"><strong aria-hidden="true">1.</strong> Rust</a></li><li class="chapter-item expanded "><a href="math/toc.html"><strong aria-hidden="true">2.</strong> Math</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="math/chapter_1.html"><strong aria-hidden="true">2.1.</strong> 测试</a></li></ol></li><li class="chapter-item expanded "><a href="wasm/toc.html"><strong aria-hidden="true">3.</strong> WebAssembly</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="wasm/rust_wasm_frontend.html"><strong aria-hidden="true">3.1.</strong> 前端入门 | Rust 和 WebAssembly</a></li></ol></li><li class="chapter-item expanded "><a href="git/toc.html"><strong aria-hidden="true">4.</strong> Git</a></li><li class="chapter-item expanded "><a href="flutter/toc.html"><strong aria-hidden="true">5.</strong> Flutter</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="flutter/get_start.html"><strong aria-hidden="true">5.1.</strong> 快速开始</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -542,6 +542,43 @@ init()
 <li><a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_wasm">rust-to-wasm</a></li>
 <li><a href="https://github.com/rustwasm/wasm-bindgen">wasm-bindgen</a></li>
 </ul>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="git待更新"><a class="header" href="#git待更新">Git待更新</a></h1>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="flutter"><a class="header" href="#flutter">Flutter</a></h1>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="flutter-1"><a class="header" href="#flutter-1">Flutter</a></h1>
+<h2 id="环境安装"><a class="header" href="#环境安装">环境安装</a></h2>
+<ul>
+<li>
+<p><a href="https://flutter.dev/docs/get-started/install/macos">Flutter macOS</a></p>
+<pre><code class="language-bash">cd ~/development
+unzip ~/Downloads/flutter_macos_2.0.1-stable.zip
+</code></pre>
+</li>
+<li>
+<p><a href="https://developer.android.com/studio">Android Studio</a></p>
+<pre><code class="language-bash"># flutter config --android-sdk
+flutter doctor --android-licenses
+</code></pre>
+</li>
+<li>
+<p><a href="https://guides.cocoapods.org/using/getting-started.html#installation">CocoaPods</a></p>
+<pre><code class="language-bash">sudo gem install cocoapods
+</code></pre>
+</li>
+</ul>
+<p><img src="flutter/./img/get_start-flutter-doctor.png" alt="flutter doctor" />
+<img src="flutter/./img/get_start-flutter-doctor-ok.png" alt="flutter doctor ok" /></p>
+<h2 id="创建和运行app"><a class="header" href="#创建和运行app">创建和运行APP</a></h2>
+<pre><code class="language-bash">flutter create my_app
+
+cd my_app
+
+open -a Simulator
+
+flutter run
+</code></pre>
 
                     </main>
 
