@@ -9,9 +9,11 @@
 
 * [WebAssembly](./wasm/toc.md)
   * [前端入门 | Rust 和 WebAssembly](./wasm/rust_wasm_frontend.md)
+  * [康威生命游戏](./wasm/game_of_life.md)
 
 * [Git](./git/toc.md)
-  <!-- * [前端入门 | Rust 和 WebAssembly](./git/xx.md) -->
 
 * [Flutter](./flutter/toc.md)
   * [快速开始](./flutter/get_start.md)
+
+* [Awesome](./awesome/toc.md)
