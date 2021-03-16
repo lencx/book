@@ -1,4 +1,4 @@
-# 前端入门 ｜ Rust 和 WebAssembly
+# WebAssembly入门
 
 ---
 
@@ -120,6 +120,7 @@ wasm-pack publish
 
 * 支持rust包文件热更新，监听`src`目录和`Cargo.toml`文件变更，自动构建
 * vite启动优化，如果之前构建过，再次启动`npm run dev`，则会跳过`wasm-pack`构建
+* 通过配置`isLib`为`true`，在执行`npm run build`时会生成可发布的npm包
 
 ```bash
 # 在vite项目中安装
@@ -168,6 +169,11 @@ npm init xc-app
 |- [@rsw] # npm 组织包
 |     |- [hey] # @rsw/hey, 目录结构同`wasm-hey`
 |     `- ...
+| # 设置`isLib`为true时，会默认在`libs`目录下生成的npm包
+| # 可以通过设置`libRoot`修改默认路径
+|- [libs]
+|     |- [@rsw]
+|     `- [wasm-hey]
 |- [node_modules] # 前端的项目包依赖
 |- [src] # 前端源代码(可以是vue, react, 或其他)
 | # 了解更多: https://nodejs.dev/learn/the-package-json-guide
@@ -218,7 +224,12 @@ export default defineConfig({
     ViteRsw({
       // 支持开发(dev)和生产模式(release)
       // 生产模式会对wasm文件的体积进行优化
-      mode: "release",
+      mode: 'release',
+      // 是否生成可发布的npm包，默认为`false`
+      // 如果设置为`true`时，会在项目根路径下生成`libs`目录
+      isLib: true,
+      // 修改默认路径`libs`
+      libRoot: 'libs',
       // 如果包在`unLinks`和`crates`都配置过
       // 会执行，先卸载(npm unlink)，再安装(npm link)
       // 例如下面会执行
