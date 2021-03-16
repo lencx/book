@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>前端入门 | Rust 和 WebAssembly - 浮之静</title>
+        <title>WebAssembly入门 - 浮之静</title>
         
         
 
@@ -93,7 +93,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">序</a></li><li class="chapter-item expanded "><a href="../rust/toc.html"><strong aria-hidden="true">1.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../math/toc.html"><strong aria-hidden="true">2.</strong> Math</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../math/chapter_1.html"><strong aria-hidden="true">2.1.</strong> 测试</a></li></ol></li><li class="chapter-item expanded "><a href="../wasm/toc.html"><strong aria-hidden="true">3.</strong> WebAssembly</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../wasm/rust_wasm_frontend.html" class="active"><strong aria-hidden="true">3.1.</strong> 前端入门 | Rust 和 WebAssembly</a></li><li class="chapter-item expanded "><a href="../wasm/game_of_life.html"><strong aria-hidden="true">3.2.</strong> 康威生命游戏</a></li></ol></li><li class="chapter-item expanded "><a href="../git/toc.html"><strong aria-hidden="true">4.</strong> Git</a></li><li class="chapter-item expanded "><a href="../flutter/toc.html"><strong aria-hidden="true">5.</strong> Flutter</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../flutter/get_start.html"><strong aria-hidden="true">5.1.</strong> 快速开始</a></li></ol></li><li class="chapter-item expanded "><a href="../awesome/toc.html"><strong aria-hidden="true">6.</strong> Awesome</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">序</a></li><li class="chapter-item expanded "><a href="../rust/toc.html"><strong aria-hidden="true">1.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../wasm/toc.html"><strong aria-hidden="true">2.</strong> WebAssembly</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../wasm/rust_wasm_frontend.html" class="active"><strong aria-hidden="true">2.1.</strong> WebAssembly入门</a></li><li class="chapter-item expanded "><a href="../wasm/game_of_life.html"><strong aria-hidden="true">2.2.</strong> 康威生命游戏</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -166,7 +166,7 @@
                 <div id="content" class="content">
                     <main style="min-height: 48vh">
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-<h1 id="前端入门--rust-和-webassembly"><a class="header" href="#前端入门--rust-和-webassembly">前端入门 ｜ Rust 和 WebAssembly</a></h1>
+<h1 id="webassembly入门"><a class="header" href="#webassembly入门">WebAssembly入门</a></h1>
 <hr />
 <h2 id="wasm是什么"><a class="header" href="#wasm是什么">Wasm是什么?</a></h2>
 <blockquote>
@@ -267,6 +267,7 @@ wasm-pack publish
 <ul>
 <li>支持rust包文件热更新，监听<code>src</code>目录和<code>Cargo.toml</code>文件变更，自动构建</li>
 <li>vite启动优化，如果之前构建过，再次启动<code>npm run dev</code>，则会跳过<code>wasm-pack</code>构建</li>
+<li>通过配置<code>isLib</code>为<code>true</code>，在执行<code>npm run build</code>时会生成可发布的npm包</li>
 </ul>
 <pre><code class="language-bash"># 在vite项目中安装
 npm i -D vite-plugin-rsw
@@ -308,6 +309,11 @@ npm init xc-app
 |- [@rsw] # npm 组织包
 |     |- [hey] # @rsw/hey, 目录结构同`wasm-hey`
 |     `- ...
+| # 设置`isLib`为true时，会默认在`libs`目录下生成的npm包
+| # 可以通过设置`libRoot`修改默认路径
+|- [libs]
+|     |- [@rsw]
+|     `- [wasm-hey]
 |- [node_modules] # 前端的项目包依赖
 |- [src] # 前端源代码(可以是vue, react, 或其他)
 | # 了解更多: https://nodejs.dev/learn/the-package-json-guide
@@ -350,7 +356,12 @@ export default defineConfig({
     ViteRsw({
       // 支持开发(dev)和生产模式(release)
       // 生产模式会对wasm文件的体积进行优化
-      mode: &quot;release&quot;,
+      mode: 'release',
+      // 是否生成可发布的npm包，默认为`false`
+      // 如果设置为`true`时，会在项目根路径下生成`libs`目录
+      isLib: true,
+      // 修改默认路径`libs`
+      libRoot: 'libs',
       // 如果包在`unLinks`和`crates`都配置过
       // 会执行，先卸载(npm unlink)，再安装(npm link)
       // 例如下面会执行
