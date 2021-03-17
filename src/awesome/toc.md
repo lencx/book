@@ -1,1 +1,3 @@
 # Awesome
+
+* [WebAssembly](./wasm.md)

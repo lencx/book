@@ -1,4 +1,4 @@
-# 关于我
+# README
 
 `{折腾 ⇌ 迷茫 ⇌ 思考]ing，在路上...`
 
@@ -10,9 +10,10 @@
 <a href="mailto:cxin1314@gmail.com"><img src="https://img.shields.io/badge/-cxin1314@gmail.com-%23323031?style=flat&logo=gmail" alt="gmail" /></a>
 
 [![github](https://img.shields.io/badge/-lencx-%23323031?style=flat&logo=github)](https://github.com/lencx)
+[![dev.to](https://img.shields.io/badge/-lencx-%23323031?style=flat&logo=dev.to)](https://dev.to/lencx)
+[![BOOK](https://img.shields.io/badge/📖-BOOK-%23323031?style=flat&labelColor=323031)](https://lencx.github.io/book)
 [![nofwl](https://img.shields.io/badge/🌐-nofwl.com-%23323031?style=flat&labelColor=323031)](https://nofwl.com)
 [![MTC](https://img.shields.io/badge/😎-MTC-%23323031?style=flat&labelColor=323031)](https://mtc.nofwl.com)
-[![BOOK](https://img.shields.io/badge/📖-BOOK-%23323031?style=flat&labelColor=323031)](https://lencx.github.io/book)
 
 #### Languages and Tools
 
