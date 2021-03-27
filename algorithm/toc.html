@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>WebAssembly - 浮之静</title>
+        <title>Algorithm - 浮之静</title>
         
         
 
@@ -94,7 +94,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">lencx</a></li><li class="chapter-item expanded "><a href="../awesome/toc.html"><strong aria-hidden="true">1.</strong> Awesome</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../awesome/wasm.html"><strong aria-hidden="true">1.1.</strong> WebAssembly</a></li><li class="chapter-item expanded "><a href="../awesome/rust.html"><strong aria-hidden="true">1.2.</strong> Rust</a></li></ol></li><li class="chapter-item expanded "><a href="../wasm/toc.html" class="active"><strong aria-hidden="true">2.</strong> WebAssembly</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../wasm/rust_wasm_frontend.html"><strong aria-hidden="true">2.1.</strong> WebAssembly入门</a></li><li class="chapter-item expanded "><a href="../wasm/game_of_life.html"><strong aria-hidden="true">2.2.</strong> 康威生命游戏</a></li></ol></li><li class="chapter-item expanded "><a href="../algorithm/toc.html"><strong aria-hidden="true">3.</strong> Algorithm</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../algorithm/linear_list.html"><strong aria-hidden="true">3.1.</strong> 线性表</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">lencx</a></li><li class="chapter-item expanded "><a href="../awesome/toc.html"><strong aria-hidden="true">1.</strong> Awesome</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../awesome/wasm.html"><strong aria-hidden="true">1.1.</strong> WebAssembly</a></li><li class="chapter-item expanded "><a href="../awesome/rust.html"><strong aria-hidden="true">1.2.</strong> Rust</a></li></ol></li><li class="chapter-item expanded "><a href="../wasm/toc.html"><strong aria-hidden="true">2.</strong> WebAssembly</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../wasm/rust_wasm_frontend.html"><strong aria-hidden="true">2.1.</strong> WebAssembly入门</a></li><li class="chapter-item expanded "><a href="../wasm/game_of_life.html"><strong aria-hidden="true">2.2.</strong> 康威生命游戏</a></li></ol></li><li class="chapter-item expanded "><a href="../algorithm/toc.html" class="active"><strong aria-hidden="true">3.</strong> Algorithm</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../algorithm/linear_list.html"><strong aria-hidden="true">3.1.</strong> 线性表</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,9 +167,22 @@
                 <div id="content" class="content">
                     <main style="min-height: 42vh">
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-<h1 id="webassembly"><a class="header" href="#webassembly">WebAssembly</a></h1>
+<h1 id="algorithm"><a class="header" href="#algorithm">Algorithm</a></h1>
+<p><strong>算法</strong>(algorithm)，在<code>数学</code>(算学)和<code>计算机科学</code>之中，一个被定义好的、计算机可施行之指示的<code>有限步骤</code>或<code>次序</code>。常用于<code>计算</code>，<code>数据处理</code>和<code>自动推理</code>。</p>
+<h2 id="常用设计模式"><a class="header" href="#常用设计模式">常用设计模式</a></h2>
+<p><code>完全遍历法</code>和<code>不完全遍历法</code>：在问题的解是有限离散解空间，且可以验证正确性和最优性时，最简单的算法就是把解空间的所有元素完全遍历一遍，逐个检测元素是否是我们要的解。这是最直接的算法，实现往往最简单。但是当解空间特别庞大时，这种算法很可能导致工程上无法承受的计算量。这时候可以利用不完全遍历方法——例如各种搜索法和规划法——来减少计算量。</p>
 <ul>
-<li><a href="./rust_wasm_frontend.html">前端入门 | Rust 和 WebAssembly</a></li>
+<li><code>分治法</code>: 把一个问题分割成互相独立的多个部分分别求解的思路。这种求解思路带来的好处之一是便于进行并行计算。</li>
+<li><code>动态规划法</code>: 当问题的整体最优解就是由局部最优解组成的时候，经常采用的一种方法。</li>
+<li><code>贪心算法</code>: 常见的近似求解思路。当问题的整体最优解不是（或无法证明是）由局部最优解组成，且对解的最优性没有要求的时候，可以采用的一种方法。</li>
+<li><code>简并法</code>: 把一个问题通过逻辑或数学推理，简化成与之等价或者近似的、相对简单的模型，进而求解的方法。</li>
+</ul>
+<h2 id="常用实现方法"><a class="header" href="#常用实现方法">常用实现方法</a></h2>
+<ul>
+<li><code>递归方法</code>和<code>迭代方法</code></li>
+<li><code>顺序计算</code>、<code>并行计算</code>和<code>分布式计算</code>: 顺序计算就是把形式化算法用编程语言进行单线程序列化后执行。</li>
+<li><code>确定性算法</code>和<code>非确定性算法</code></li>
+<li><code>精确求解</code>和<code>近似求解</code></li>
 </ul>
 
                     </main>
@@ -177,13 +190,13 @@
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../awesome/rust.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../wasm/game_of_life.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../wasm/rust_wasm_frontend.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../algorithm/linear_list.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -204,13 +217,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../awesome/rust.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../wasm/game_of_life.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="../wasm/rust_wasm_frontend.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../algorithm/linear_list.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

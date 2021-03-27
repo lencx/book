@@ -47,6 +47,7 @@
         
 
         
+        <style>img { border-radius: 4px; max-width: 100%; }</style>
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -95,7 +96,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">lencx</a></li><li class="chapter-item expanded "><a href="awesome/toc.html"><strong aria-hidden="true">1.</strong> Awesome</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="awesome/wasm.html"><strong aria-hidden="true">1.1.</strong> WebAssembly</a></li></ol></li><li class="chapter-item expanded "><a href="wasm/toc.html"><strong aria-hidden="true">2.</strong> WebAssembly</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="wasm/rust_wasm_frontend.html"><strong aria-hidden="true">2.1.</strong> WebAssembly入门</a></li><li class="chapter-item expanded "><a href="wasm/game_of_life.html"><strong aria-hidden="true">2.2.</strong> 康威生命游戏</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">lencx</a></li><li class="chapter-item expanded "><a href="awesome/toc.html"><strong aria-hidden="true">1.</strong> Awesome</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="awesome/wasm.html"><strong aria-hidden="true">1.1.</strong> WebAssembly</a></li><li class="chapter-item expanded "><a href="awesome/rust.html"><strong aria-hidden="true">1.2.</strong> Rust</a></li></ol></li><li class="chapter-item expanded "><a href="wasm/toc.html"><strong aria-hidden="true">2.</strong> WebAssembly</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="wasm/rust_wasm_frontend.html"><strong aria-hidden="true">2.1.</strong> WebAssembly入门</a></li><li class="chapter-item expanded "><a href="wasm/game_of_life.html"><strong aria-hidden="true">2.2.</strong> 康威生命游戏</a></li></ol></li><li class="chapter-item expanded "><a href="algorithm/toc.html"><strong aria-hidden="true">3.</strong> Algorithm</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="algorithm/linear_list.html"><strong aria-hidden="true">3.1.</strong> 线性表</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -308,6 +309,11 @@
 <li><a href="https://github.com/ColinEberhardt/wasm-rust-chip8">A WebAssembly CHIP-8 Emulator</a>: A WebAssembly CHIP-8 emulator written with Rust</li>
 <li><a href="https://bbodi.github.io/notecalc3">NoteCalc is a handy notepad with a smart builtin calculator.</a></li>
 <li><a href="https://github.com/torch2424/wasmboy">wasmboy</a>: Game Boy / Game Boy Color Emulator Library, 🎮written for WebAssembly using AssemblyScript. 🚀Demos built with Preact and Svelte. ⚛️</li>
+</ul>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
+<ul>
+<li><a href="https://awesome-rust.com">Awesome Rust</a>: A curated list of awesome Rust frameworks, libraries and software. Inspired by awesome-go.</li>
 </ul>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="webassembly-1"><a class="header" href="#webassembly-1">WebAssembly</a></h1>
@@ -671,6 +677,38 @@ init()
 <blockquote>
 <p>可以把最初的细胞结构定义为种子，当所有在种子中的细胞同时被以上规则处理后，可以得到第一代细胞图。按规则继续处理当前的细胞图，可以得到下一代的细胞图，周而复始。</p>
 </blockquote>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="algorithm"><a class="header" href="#algorithm">Algorithm</a></h1>
+<p><strong>算法</strong>(algorithm)，在<code>数学</code>(算学)和<code>计算机科学</code>之中，一个被定义好的、计算机可施行之指示的<code>有限步骤</code>或<code>次序</code>。常用于<code>计算</code>，<code>数据处理</code>和<code>自动推理</code>。</p>
+<h2 id="常用设计模式"><a class="header" href="#常用设计模式">常用设计模式</a></h2>
+<p><code>完全遍历法</code>和<code>不完全遍历法</code>：在问题的解是有限离散解空间，且可以验证正确性和最优性时，最简单的算法就是把解空间的所有元素完全遍历一遍，逐个检测元素是否是我们要的解。这是最直接的算法，实现往往最简单。但是当解空间特别庞大时，这种算法很可能导致工程上无法承受的计算量。这时候可以利用不完全遍历方法——例如各种搜索法和规划法——来减少计算量。</p>
+<ul>
+<li><code>分治法</code>: 把一个问题分割成互相独立的多个部分分别求解的思路。这种求解思路带来的好处之一是便于进行并行计算。</li>
+<li><code>动态规划法</code>: 当问题的整体最优解就是由局部最优解组成的时候，经常采用的一种方法。</li>
+<li><code>贪心算法</code>: 常见的近似求解思路。当问题的整体最优解不是（或无法证明是）由局部最优解组成，且对解的最优性没有要求的时候，可以采用的一种方法。</li>
+<li><code>简并法</code>: 把一个问题通过逻辑或数学推理，简化成与之等价或者近似的、相对简单的模型，进而求解的方法。</li>
+</ul>
+<h2 id="常用实现方法"><a class="header" href="#常用实现方法">常用实现方法</a></h2>
+<ul>
+<li><code>递归方法</code>和<code>迭代方法</code></li>
+<li><code>顺序计算</code>、<code>并行计算</code>和<code>分布式计算</code>: 顺序计算就是把形式化算法用编程语言进行单线程序列化后执行。</li>
+<li><code>确定性算法</code>和<code>非确定性算法</code></li>
+<li><code>精确求解</code>和<code>近似求解</code></li>
+</ul>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="线性表"><a class="header" href="#线性表">线性表</a></h1>
+<p>线性表(<code>linear list</code>)，是由<code>n(n≥0)</code>个<code>数据</code>元素(结点) <code>a[0], a[1], a[2]..., a[n-1]</code>组成的<code>有限序列</code>。</p>
+<h2 id="链表"><a class="header" href="#链表">链表</a></h2>
+<p>链表(<code>linked list</code>)，是一种基础数据结构，是一种<code>线性表</code>，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的<code>指针</code>(<code>Pointer</code>)。由于不必须按顺序存储，链表在插入的时候可以达到<code>O(1)</code>的<code>复杂度</code>。</p>
+<h3 id="单链表"><a class="header" href="#单链表">单链表</a></h3>
+<p>单向链表(<code>singly linked list</code>)，其节点包含两个字段：整数值和到下一个节点的链接。</p>
+<img height="100" src="algorithm/./img/singly-linked-list.png" alt="singly linked list">
+<h3 id="双链表"><a class="header" href="#双链表">双链表</a></h3>
+<p>双向链表(<code>doubly linked list</code>)，其节点包含三个字段：整数值，指向下一个节点的链接和指向上一个节点的链接，既能向前查询也可以向后查询。</p>
+<img height="100" src="algorithm/./img/doubly-linked-list.png" alt="doubly linked list">
+<h3 id="循环单链表"><a class="header" href="#循环单链表">循环单链表</a></h3>
+<p>循环单链表(<code>circular linked list</code>)，单链表尾部的指针指向头节点。</p>
+<img height="150" src="algorithm/./img/circular-linked-list.png" alt="circular linked list">
 
                     </main>
 
