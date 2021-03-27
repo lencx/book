@@ -8,6 +8,9 @@ src = "src"
 [rust]
 edition = "2018"
 
+# enable the "mdbook-linkcheck" renderer
+# [output.linkcheck]
+
 # https://github.com/lzanini/mdbook-katex
 [preprocessor.katex]
 
