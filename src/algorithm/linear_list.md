@@ -10,16 +10,16 @@
 
 单向链表(`singly linked list`)，其节点包含两个字段：整数值和到下一个节点的链接。
 
-<img height="100" src="./img/singly-linked-list.png" alt="singly linked list">
+<img style="max-height: 90px" src="./img/singly-linked-list.png" alt="singly linked list">
 
 ### 双链表
 
 双向链表(`doubly linked list`)，其节点包含三个字段：整数值，指向下一个节点的链接和指向上一个节点的链接，既能向前查询也可以向后查询。
 
-<img height="100" src="./img/doubly-linked-list.png" alt="doubly linked list">
+<img style="max-height: 100px" src="./img/doubly-linked-list.png" alt="doubly linked list">
 
 ### 循环单链表
 
 循环单链表(`circular linked list`)，单链表尾部的指针指向头节点。
 
-<img height="150" src="./img/circular-linked-list.png" alt="circular linked list">
+<img style="max-height: 120px" src="./img/circular-linked-list.png" alt="circular linked list">
