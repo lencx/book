@@ -14,7 +14,7 @@
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
         <meta name="theme-color" content="#ffffff" />
 
         
@@ -168,7 +168,36 @@
                     <main style="min-height: 42vh">
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="algorithm"><a class="header" href="#algorithm">Algorithm</a></h1>
-<p><strong>算法</strong>(algorithm)，在<code>数学</code>(算学)和<code>计算机科学</code>之中，一个被定义好的、计算机可施行之指示的<code>有限步骤</code>或<code>次序</code>。常用于<code>计算</code>，<code>数据处理</code>和<code>自动推理</code>。</p>
+<p><strong>算法</strong>(algorithm)，在<code>数学</code>和<code>计算机科学</code>中，一个被定义好的、计算机可实现指令的<code>有限步骤</code>或<code>次序</code>。常用于<code>执行计算</code>，<code>数据处理</code>，<code>自动推理</code>和其他任务等。</p>
+<p>算法是计算机处理信息的本质，因为计算机程序本质上是一个算法来告诉计算机确切的步骤来执行一个指定的任务。一般，当算法在处理信息时，会从<code>输入设备</code>或<code>数据的存储地址</code>读取数据，把结果写入<code>输出设备</code>或<code>某个存储地址</code>供以后再调用。</p>
+<h2 id="复杂度"><a class="header" href="#复杂度">复杂度</a></h2>
+<p><code>复杂度(by complexity)</code>分为<code>时间复杂度(time complexity)</code>和<code>空间复杂度(space complexity)</code></p>
+<h3 id="时间复杂度"><a class="header" href="#时间复杂度">时间复杂度</a></h3>
+<p>是指算法需要消耗的时间资源。一般来说，计算机算法是问题规模 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的函数 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>，算法的时间复杂度也因此记作</p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></p>
+<p>算法执行时间的增长率与 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 的增长率正相关，称作<code>渐近时间复杂度</code>，简称<code>时间复杂度</code>。</p>
+<p>常见的时间复杂度有</p>
+<table><thead><tr><th>名词</th><th>符号</th></tr></thead><tbody>
+<tr><td>常数阶</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>对数阶</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>线性阶</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>线性对数阶</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>平方阶</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>立方阶</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>次方阶</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.099108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>指数阶</td><td><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>...</td><td>...</td></tr>
+</tbody></table>
+<h3 id="空间复杂度"><a class="header" href="#空间复杂度">空间复杂度</a></h3>
+<p>是指算法需要消耗的空间资源。其计算和表示方法与时间复杂度类似，一般都用复杂度的<code>渐近性</code>来表示。</p>
 <h2 id="常用设计模式"><a class="header" href="#常用设计模式">常用设计模式</a></h2>
 <p><code>完全遍历法</code>和<code>不完全遍历法</code>：在问题的解是有限离散解空间，且可以验证正确性和最优性时，最简单的算法就是把解空间的所有元素完全遍历一遍，逐个检测元素是否是我们要的解。这是最直接的算法，实现往往最简单。但是当解空间特别庞大时，这种算法很可能导致工程上无法承受的计算量。这时候可以利用不完全遍历方法——例如各种搜索法和规划法——来减少计算量。</p>
 <ul>
@@ -183,6 +212,12 @@
 <li><code>顺序计算</code>、<code>并行计算</code>和<code>分布式计算</code>: 顺序计算就是把形式化算法用编程语言进行单线程序列化后执行。</li>
 <li><code>确定性算法</code>和<code>非确定性算法</code></li>
 <li><code>精确求解</code>和<code>近似求解</code></li>
+</ul>
+<h2 id="参考链接"><a class="header" href="#参考链接">参考链接</a></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Algorithm">Algorithm</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Linked_list">Linked list</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%BA%BF%E6%80%A7%E8%A1%A8">线性表</a></li>
 </ul>
 
                     </main>
