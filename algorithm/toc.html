@@ -199,15 +199,16 @@
 <h2 id="常用设计模式"><a class="header" href="#常用设计模式">常用设计模式</a></h2>
 <p><code>完全遍历法</code>和<code>不完全遍历法</code>：在问题的解是有限离散解空间，且可以验证正确性和最优性时，最简单的算法就是把解空间的所有元素完全遍历一遍，逐个检测元素是否是我们要的解。这是最直接的算法，实现往往最简单。但是当解空间特别庞大时，这种算法很可能导致工程上无法承受的计算量。这时候可以利用不完全遍历方法——例如各种搜索法和规划法——来减少计算量。</p>
 <ul>
-<li><code>分治法</code>: 把一个问题分割成互相独立的多个部分分别求解的思路。这种求解思路带来的好处之一是便于进行并行计算。</li>
-<li><code>动态规划法</code>: 当问题的整体最优解就是由局部最优解组成的时候，经常采用的一种方法。</li>
-<li><code>贪心算法</code>: 常见的近似求解思路。当问题的整体最优解不是（或无法证明是）由局部最优解组成，且对解的最优性没有要求的时候，可以采用的一种方法。</li>
+<li><code>分治法(divide-and-conquer algorithm)</code>: 就是把一个复杂的问题分成两个或更多的相同或相似的子问题，直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并。这种求解思路带来的好处之一是便于进行并行计算。</li>
+<li><code>动态规划法(dynamic programming, 简称DP)</code>: 通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。当问题的整体最优解就是由局部最优解组成的时候，经常采用的一种方法。</li>
+<li><code>贪心算法(greedy algorithm)</code>: 又称贪婪算法，是一种在每一步选择中都采取在当前状态下最好或最优（即最有利）的选择，从而希望导致结果是最好或最优的算法。</li>
+<li><code>线性规划法(linear programming，简称LP)</code>: 特指目标函数和约束条件皆为线性的最优化问题。</li>
 <li><code>简并法</code>: 把一个问题通过逻辑或数学推理，简化成与之等价或者近似的、相对简单的模型，进而求解的方法。</li>
 </ul>
 <h2 id="常用实现方法"><a class="header" href="#常用实现方法">常用实现方法</a></h2>
 <ul>
-<li><code>递归方法</code>和<code>迭代方法</code></li>
-<li><code>顺序计算</code>、<code>并行计算</code>和<code>分布式计算</code>: 顺序计算就是把形式化算法用编程语言进行单线程序列化后执行。</li>
+<li><code>递归方法(recursion)</code>和<code>迭代方法</code></li>
+<li><code>顺序计算</code>、<code>并行计算(parallel computing)</code>和<code>分布式计算(distributed computing)</code>: 顺序计算就是把形式化算法用编程语言进行单线程序列化后执行。</li>
 <li><code>确定性算法</code>和<code>非确定性算法</code></li>
 <li><code>精确求解</code>和<code>近似求解</code></li>
 </ul>
@@ -216,6 +217,12 @@
 <li><a href="https://en.wikipedia.org/wiki/Algorithm">Algorithm</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Linked_list">Linked list</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/%E7%BA%BF%E6%80%A7%E8%A1%A8">线性表</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%88%86%E6%B2%BB%E6%B3%95">分治法</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92">动态规划</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95">贪心算法</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92">线性规划</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E9%80%92%E5%BD%92">递归</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%BF%AD%E4%BB%A3">迭代</a></li>
 </ul>
 
                     </main>
