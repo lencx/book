@@ -19,7 +19,7 @@
 * [Algorithm](./algorithm/toc.md)
   * [线性表](./algorithm/linear_list.md)
 
-<!-- * [Git](./git/toc.md) -->
+<!-- * [Thinking](./think/toc.md) -->
 
 <!-- * [Flutter](./flutter/toc.md)
   * [快速开始](./flutter/get_start.md) -->

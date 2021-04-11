@@ -121,6 +121,7 @@ wasm-pack publish
 * 支持rust包文件热更新，监听`src`目录和`Cargo.toml`文件变更，自动构建
 * vite启动优化，如果之前构建过，再次启动`npm run dev`，则会跳过`wasm-pack`构建
 * 通过配置`isLib`为`true`，在执行`npm run build`时会生成可发布的npm包
+* 浏览器端友好的错误提示（弹窗和浏览器控制台）
 
 ```bash
 # 在vite项目中安装
@@ -128,6 +129,9 @@ npm i -D vite-plugin-rsw
 # or
 yarn add -D vite-plugin-rsw
 ```
+
+![rsw optimized](./img/rust_wasm_frontend-rsw-optimized.png)
+![rsw error](./img/rust_wasm_frontend-rsw-error.png)
 
 ### 5. [create-xc-app](https://github.com/lencx/create-xc-app)
 
@@ -365,10 +369,11 @@ init()
 
 ## 相关链接
 
-* [Wasm学习项目: lencx/learn-wasm](https://github.com/lencx/learn-wasm)
+* [RSW资源清单 - lencx/awesome-rsw](https://github.com/lencx/awesome-rsw)
+* [Wasm学习项目 - lencx/learn-wasm](https://github.com/lencx/learn-wasm)
 * [Vite插件Rsw - lencx/vite-plugin-rsw](https://github.com/lencx/vite-plugin-rsw)
 * [项目脚手架 - lencx/create-xc-app](https://github.com/lencx/create-xc-app)
-* [WebAssembly相关资源清单](https://mtc.nofwl.com/awesome/wasm.html)
+* [WebAssembly相关资源清单](/awesome/wasm.md)
 
 ---
 

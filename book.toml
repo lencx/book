@@ -18,6 +18,8 @@ edition = "2018"
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
 
+# https://github.com/rust-lang/mdBook/issues/1278
+
 [output.html]
 theme = "lencx"
 default-theme = "rust"
