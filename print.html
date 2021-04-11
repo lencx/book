@@ -421,12 +421,15 @@ wasm-pack publish
 <li>支持rust包文件热更新，监听<code>src</code>目录和<code>Cargo.toml</code>文件变更，自动构建</li>
 <li>vite启动优化，如果之前构建过，再次启动<code>npm run dev</code>，则会跳过<code>wasm-pack</code>构建</li>
 <li>通过配置<code>isLib</code>为<code>true</code>，在执行<code>npm run build</code>时会生成可发布的npm包</li>
+<li>浏览器端友好的错误提示（弹窗和浏览器控制台）</li>
 </ul>
 <pre><code class="language-bash"># 在vite项目中安装
 npm i -D vite-plugin-rsw
 # or
 yarn add -D vite-plugin-rsw
 </code></pre>
+<p><img src="wasm/./img/rust_wasm_frontend-rsw-optimized.png" alt="rsw optimized" />
+<img src="wasm/./img/rust_wasm_frontend-rsw-error.png" alt="rsw error" /></p>
 <h3 id="5-a-hrefhttpsgithubcomlencxcreate-xc-appcreate-xc-appa"><a class="header" href="#5-a-hrefhttpsgithubcomlencxcreate-xc-appcreate-xc-appa">5. <a href="https://github.com/lencx/create-xc-app">create-xc-app</a></a></h3>
 <blockquote>
 <p>脚手架 - ⚡️在几秒钟内创建一个项目！维护了多种项目模板。</p>
@@ -639,10 +642,11 @@ init()
 <hr />
 <h2 id="相关链接"><a class="header" href="#相关链接">相关链接</a></h2>
 <ul>
-<li><a href="https://github.com/lencx/learn-wasm">Wasm学习项目: lencx/learn-wasm</a></li>
+<li><a href="https://github.com/lencx/awesome-rsw">RSW资源清单 - lencx/awesome-rsw</a></li>
+<li><a href="https://github.com/lencx/learn-wasm">Wasm学习项目 - lencx/learn-wasm</a></li>
 <li><a href="https://github.com/lencx/vite-plugin-rsw">Vite插件Rsw - lencx/vite-plugin-rsw</a></li>
 <li><a href="https://github.com/lencx/create-xc-app">项目脚手架 - lencx/create-xc-app</a></li>
-<li><a href="https://mtc.nofwl.com/awesome/wasm.html">WebAssembly相关资源清单</a></li>
+<li><a href="wasm//awesome/wasm.html">WebAssembly相关资源清单</a></li>
 </ul>
 <hr />
 <ul>
@@ -656,7 +660,7 @@ init()
 </ul>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="康威生命游戏"><a class="header" href="#康威生命游戏">康威生命游戏</a></h1>
-<p><a href="https://wasm.nofwl.com/#/rsw/game-of-life"><strong>体验地址</strong></a></p>
+<p><a href="https://wasm.nofwl.com/#/rsw/game-of-life"><strong>Demo地址</strong></a></p>
 <blockquote>
 <p><a href="https://zh.wikipedia.org/wiki/%E5%BA%B7%E5%A8%81%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F">康威生命游戏（英语：Conway's Game of Life）</a>，又称康威生命棋，是英国数学家约翰·何顿·康威在1970年发明的细胞自动机。
 它最初于1970年10月在《科学美国人》杂志上马丁·葛登能的“数学游戏”专栏出现。</p>
@@ -675,6 +679,12 @@ init()
 <blockquote>
 <p>可以把最初的细胞结构定义为种子，当所有在种子中的细胞同时被以上规则处理后，可以得到第一代细胞图。按规则继续处理当前的细胞图，可以得到下一代的细胞图，周而复始。</p>
 </blockquote>
+<h2 id="游戏操作"><a class="header" href="#游戏操作">游戏操作</a></h2>
+<ul>
+<li><code>开始 / 暂停</code>按钮</li>
+<li>点击单元格切换细胞状态: <code>存活 ⇋ 死亡</code></li>
+</ul>
+<p><img src="wasm/./img/game_of_life-canvas.png" alt="canvas" /></p>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="algorithm"><a class="header" href="#algorithm">Algorithm</a></h1>
 <p><strong>算法(algorithm)</strong>，在<code>数学(mathematics)</code>和<code>计算机科学(computer science)</code>中，一个被定义好的、计算机可实现指令的<code>有限步骤</code>或<code>次序</code>。常用于<code>执行计算(calculations)</code>，<code>数据处理(data processing)</code>，<code>自动推理(automated reasoning)</code>和其他任务等。</p>

@@ -267,12 +267,15 @@ wasm-pack publish
 <li>支持rust包文件热更新，监听<code>src</code>目录和<code>Cargo.toml</code>文件变更，自动构建</li>
 <li>vite启动优化，如果之前构建过，再次启动<code>npm run dev</code>，则会跳过<code>wasm-pack</code>构建</li>
 <li>通过配置<code>isLib</code>为<code>true</code>，在执行<code>npm run build</code>时会生成可发布的npm包</li>
+<li>浏览器端友好的错误提示（弹窗和浏览器控制台）</li>
 </ul>
 <pre><code class="language-bash"># 在vite项目中安装
 npm i -D vite-plugin-rsw
 # or
 yarn add -D vite-plugin-rsw
 </code></pre>
+<p><img src="./img/rust_wasm_frontend-rsw-optimized.png" alt="rsw optimized" />
+<img src="./img/rust_wasm_frontend-rsw-error.png" alt="rsw error" /></p>
 <h3 id="5-a-hrefhttpsgithubcomlencxcreate-xc-appcreate-xc-appa"><a class="header" href="#5-a-hrefhttpsgithubcomlencxcreate-xc-appcreate-xc-appa">5. <a href="https://github.com/lencx/create-xc-app">create-xc-app</a></a></h3>
 <blockquote>
 <p>脚手架 - ⚡️在几秒钟内创建一个项目！维护了多种项目模板。</p>
@@ -485,10 +488,11 @@ init()
 <hr />
 <h2 id="相关链接"><a class="header" href="#相关链接">相关链接</a></h2>
 <ul>
-<li><a href="https://github.com/lencx/learn-wasm">Wasm学习项目: lencx/learn-wasm</a></li>
+<li><a href="https://github.com/lencx/awesome-rsw">RSW资源清单 - lencx/awesome-rsw</a></li>
+<li><a href="https://github.com/lencx/learn-wasm">Wasm学习项目 - lencx/learn-wasm</a></li>
 <li><a href="https://github.com/lencx/vite-plugin-rsw">Vite插件Rsw - lencx/vite-plugin-rsw</a></li>
 <li><a href="https://github.com/lencx/create-xc-app">项目脚手架 - lencx/create-xc-app</a></li>
-<li><a href="https://mtc.nofwl.com/awesome/wasm.html">WebAssembly相关资源清单</a></li>
+<li><a href="/awesome/wasm.html">WebAssembly相关资源清单</a></li>
 </ul>
 <hr />
 <ul>
