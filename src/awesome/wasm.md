@@ -21,3 +21,4 @@
 * [A WebAssembly CHIP-8 Emulator](https://github.com/ColinEberhardt/wasm-rust-chip8): A WebAssembly CHIP-8 emulator written with Rust
 * [NoteCalc is a handy notepad with a smart builtin calculator.](https://bbodi.github.io/notecalc3)
 * [wasmboy](https://github.com/torch2424/wasmboy): Game Boy / Game Boy Color Emulator Library, 🎮written for WebAssembly using AssemblyScript. 🚀Demos built with Preact and Svelte. ⚛️
+* [v86](https://github.com/copy/v86) - v86模拟与x86兼容的CPU和硬件。 机器代码在运行时转换为WebAssembly模块，以实现良好的性能，支持多种仿真硬件。

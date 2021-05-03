@@ -373,7 +373,7 @@ init()
 * [Wasm学习项目 - lencx/learn-wasm](https://github.com/lencx/learn-wasm)
 * [Vite插件Rsw - lencx/vite-plugin-rsw](https://github.com/lencx/vite-plugin-rsw)
 * [项目脚手架 - lencx/create-xc-app](https://github.com/lencx/create-xc-app)
-* [WebAssembly相关资源清单](/awesome/wasm.md)
+* [WebAssembly相关资源清单](https://lencx.github.io/book/awesome/wasm.html)
 
 ---
 
