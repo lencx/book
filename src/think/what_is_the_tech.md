@@ -4,16 +4,11 @@
 
 ## 背景
 
-我发了朋友圈：`做了个奇怪的梦，梦见被离职了，理由竟然是：你技术太菜了`
-
-我补充评论：`我还没想明白怎么回事，就醒了。有点遗憾的是：想再努力反驳两句，结果没机会了…`
-
-很多人评论：`梦是反的`
-
-我的回复：`那就是到技术的瓶颈期了`
-
-YaoL.in评论：`这衍生出一个很好的问题：「你如何证明技术不菜？」`
-
+我发了朋友圈：`做了个奇怪的梦，梦见被离职了，理由竟然是：你技术太菜了` \
+我补充评论：`我还没想明白怎么回事，就醒了。有点遗憾的是：想再努力反驳两句，结果没机会了…` \
+很多人评论：`梦是反的` \
+我的回复：`那就是到技术的瓶颈期了` \
+YaoL.in评论：`这衍生出一个很好的问题：「你如何证明技术不菜？」` \
 我的回复：`个人感觉还是影响力，即使你的技术很厉害，没人知道，或者别人也不会去使用你的技术，似乎一切为零（为零仅代表这个技术所产生的影响力，不代表技术本身的价值）`
 
 ---
@@ -70,12 +65,24 @@ YaoL.in评论：`这衍生出一个很好的问题：「你如何证明技术不
    * 如果中文搜索结果不理想，可以将关键词转为对应英语再去搜索。
    * 翻译软件：[DeepL 翻译](https://www.deepl.com)，[Google 翻译](https://translate.google.cn)等。
    * 学习一些搜索相关的高级技巧
-     * [How to use search like a pro: 10 tips and tricks for Google and beyond](https://www.theguardian.com/technology/2016/jan/15/how-to-use-search-like-a-pro-10-tips-and-tricks-for-google-and-beyond)：1）`准确搜索（Exact phrase）`；2）`排除关键词（ Exclude terms）`；3）`用 OR (或)逻辑进行搜索（Either OR）`；4）`同义词搜索 ~（Synonym search）`；5）`站内搜索（Search within a site）`；6）`善用 * 星号（The power of the asterisk）`；7）`在两个数值之间进行搜索（Searching between two values）`；8）`在网页标题, 链接和主体中搜索关键词（Search for word in the body, title or URL of a page）`；9）`搜索相关网站（Search for related sites）`；10）`搜索技能的组合使用（Combine them）`
+     * [How to use search like a pro: 10 tips and tricks for Google and beyond](https://www.theguardian.com/technology/2016/jan/15/how-to-use-search-like-a-pro-10-tips-and-tricks-for-google-and-beyond)
      * [搜索引擎技巧](https://baike.baidu.com/item/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%8A%80%E5%B7%A7)
      * [百度搜索技巧](https://jingyan.baidu.com/article/0964eca24b71978285f536f4.html)
      * [Bing 高级搜索](http://help.bing.microsoft.com/apex/index/18/zh-CHS/10002)
      * [GitHub advanced search](https://github.com/search/advanced)
 3. **延伸搜索**：围绕关键词，扩大搜索范围，查看一些相关链接
+
+**🎉 Google高级搜索的10个技巧**：\
+1）准确搜索（Exact phrase）\
+2）排除关键词（ Exclude terms）\
+3）用 OR (或)逻辑进行搜索（Either OR）\
+4）同义词搜索 ~（Synonym search）\
+5）站内搜索（Search within a site）\
+6）善用 * 星号（The power of the asterisk）\
+7）在两个数值之间进行搜索（Searching between two values）\
+8）在网页标题, 链接和主体中搜索关键词（Search for word in the body, title or URL of a page）\
+9）搜索相关网站（Search for related sites）\
+10）搜索技能的组合使用（Combine them）
 
 ## 总结
 
