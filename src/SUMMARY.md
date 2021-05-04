@@ -2,8 +2,8 @@
 
 [lencx](./README.md)
 
-* [Thinking](./think/toc.md)
-  * [技术是什么？](./think/what_is_the_tech.md)
+* [Thinking](./thinking/toc.md)
+  * [技术是什么？](./thinking/what_is_the_tech.md)
 
 * [Awesome](./awesome/toc.md)
   * [WebAssembly](./awesome/wasm.md)
