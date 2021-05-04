@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>线性表 - 浮之静</title>
+        <title>Thinking - 浮之静</title>
         
         
 
@@ -92,7 +92,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">lencx</a></li><li class="chapter-item expanded "><a href="../think/toc.html">Thinking</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../think/what_is_the_tech.html">技术是什么？</a></li></ol></li><li class="chapter-item expanded "><a href="../awesome/toc.html">Awesome</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../awesome/wasm.html">WebAssembly</a></li><li class="chapter-item expanded "><a href="../awesome/rust.html">Rust</a></li></ol></li><li class="chapter-item expanded "><a href="../wasm/toc.html">WebAssembly</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../wasm/rust_wasm_frontend.html">WebAssembly入门</a></li><li class="chapter-item expanded "><a href="../wasm/game_of_life.html">康威生命游戏</a></li></ol></li><li class="chapter-item expanded "><a href="../algorithm/toc.html">Algorithm</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../algorithm/linear_list.html" class="active">线性表</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">lencx</a></li><li class="chapter-item expanded "><a href="../think/toc.html" class="active">Thinking</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../think/what_is_the_tech.html">技术是什么？</a></li></ol></li><li class="chapter-item expanded "><a href="../awesome/toc.html">Awesome</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../awesome/wasm.html">WebAssembly</a></li><li class="chapter-item expanded "><a href="../awesome/rust.html">Rust</a></li></ol></li><li class="chapter-item expanded "><a href="../wasm/toc.html">WebAssembly</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../wasm/rust_wasm_frontend.html">WebAssembly入门</a></li><li class="chapter-item expanded "><a href="../wasm/game_of_life.html">康威生命游戏</a></li></ol></li><li class="chapter-item expanded "><a href="../algorithm/toc.html">Algorithm</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../algorithm/linear_list.html">线性表</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -165,30 +165,23 @@
                 <div id="content" class="content">
                     <main style="min-height: 42vh">
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-<h1 id="线性表"><a class="header" href="#线性表">线性表</a></h1>
-<p>线性表(<code>linear list</code>)，是由<code>n(n≥0)</code>个<code>数据</code>元素(结点) <code>a[0], a[1], a[2]..., a[n-1]</code>组成的<code>有限序列</code>。</p>
-<h2 id="链表"><a class="header" href="#链表">链表</a></h2>
-<p>链表(<code>linked list</code>)，是一种基础数据结构，是一种<code>线性表</code>，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的<code>指针</code>(<code>Pointer</code>)。由于不必须按顺序存储，链表在插入的时候可以达到<code>O(1)</code>的<code>复杂度</code>。</p>
-<h3 id="单链表"><a class="header" href="#单链表">单链表</a></h3>
-<p>单向链表(<code>singly linked list</code>)，其节点包含两个字段：整数值和到下一个节点的链接。</p>
-<img style="max-height: 90px" src="./img/singly-linked-list.png" alt="singly linked list">
-<h3 id="双链表"><a class="header" href="#双链表">双链表</a></h3>
-<p>双向链表(<code>doubly linked list</code>)，其节点包含三个字段：整数值，指向下一个节点的链接和指向上一个节点的链接，既能向前查询也可以向后查询。</p>
-<img style="max-height: 100px" src="./img/doubly-linked-list.png" alt="doubly linked list">
-<h3 id="循环单链表"><a class="header" href="#循环单链表">循环单链表</a></h3>
-<p>循环单链表(<code>circular linked list</code>)，单链表尾部的指针指向头节点。</p>
-<img style="max-height: 120px" src="./img/circular-linked-list.png" alt="circular linked list">
+<h1 id="thinking"><a class="header" href="#thinking">Thinking</a></h1>
+<p>这里记录所学，所思，所感，所想。</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../algorithm/toc.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
+                        
+                            <a rel="next" href="../think/what_is_the_tech.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -207,11 +200,15 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../algorithm/toc.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
+                
+                    <a rel="next" href="../think/what_is_the_tech.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 
