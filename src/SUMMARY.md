@@ -2,6 +2,9 @@
 
 [lencx](./README.md)
 
+* [Thinking](./think/toc.md)
+  * [技术是什么？](./think/what_is_the_tech.md)
+
 * [Awesome](./awesome/toc.md)
   * [WebAssembly](./awesome/wasm.md)
   * [Rust](./awesome/rust.md)
@@ -18,8 +21,6 @@
 
 * [Algorithm](./algorithm/toc.md)
   * [线性表](./algorithm/linear_list.md)
-
-<!-- * [Thinking](./think/toc.md) -->
 
 <!-- * [Flutter](./flutter/toc.md)
   * [快速开始](./flutter/get_start.md) -->

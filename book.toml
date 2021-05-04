@@ -23,6 +23,7 @@ command = "mdbook-mermaid"
 [output.html]
 theme = "lencx"
 default-theme = "rust"
+no-section-label = true
 google-analytics = "UA-76982222-5"
 git-repository-url = "https://github.com/lencx/book"
 additional-js = ["plugins/mermaid.min.js", "plugins/mermaid.init.js"]
