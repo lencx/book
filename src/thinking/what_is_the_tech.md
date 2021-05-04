@@ -61,7 +61,7 @@ YaoL.in评论：`这衍生出一个很好的问题：「你如何证明技术不
 
 1. **抽象**: 用技术关键词去描述问题
 2. **搜索**：根据关键词去搜索问题
-   * 尽量避免使用百度，有条件的使用 [Googel](https://www.google.com)，没条件可以使用 [Bing](https://www.bing.com)。
+   * 尽量避免使用百度，有条件的使用 [Google](https://www.google.com)，没条件可以使用 [Bing](https://www.bing.com)。
    * 如果中文搜索结果不理想，可以将关键词转为对应英语再去搜索。
    * 翻译软件：[DeepL 翻译](https://www.deepl.com)，[Google 翻译](https://translate.google.cn)等。
    * 学习一些搜索相关的高级技巧
