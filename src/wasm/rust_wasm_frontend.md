@@ -121,7 +121,7 @@ wasm-pack publish
 * 支持rust包文件热更新，监听`src`目录和`Cargo.toml`文件变更，自动构建
 * vite启动优化，如果之前构建过，再次启动`npm run dev`，则会跳过`wasm-pack`构建
 * 通过配置`isLib`为`true`，在执行`npm run build`时会生成可发布的npm包
-* 浏览器端友好的错误提示（弹窗和浏览器控制台）
+* 友好的错误提示：浏览器端弹窗+控制台及终端命令行
 
 ```bash
 # 在vite项目中安装
@@ -132,6 +132,8 @@ yarn add -D vite-plugin-rsw
 
 ![rsw optimized](./img/rust_wasm_frontend-rsw-optimized.png)
 ![rsw error](./img/rust_wasm_frontend-rsw-error.png)
+![rsw error outdir](./img/rust_wasm_frontend-rsw-error-outdir.png)
+![rsw error wasm-pack](./img/rust_wasm_frontend-rsw-error-wasm-pack.png)
 
 ### 5. [create-xc-app](https://github.com/lencx/create-xc-app)
 
@@ -208,7 +210,7 @@ cargo new --lib <name>
 ```
 
 ![wasm-pack new](./img/rust_wasm_frontend-wasm-pack-new.png)
-![cargo new](./img/rust_wasm_frontend-caro-new.png)
+![cargo new](./img/rust_wasm_frontend-cargo-new.png)
 
 ### 项目配置
 
@@ -245,7 +247,14 @@ export default defineConfig({
       // `npm link wasm-hey @rsw/hey`
       // 因为执行顺序原因，虽然上面的unLinks会把`wasm-hey`卸载
       // 但是这里会重新进行安装
-      crates: ["wasm-hey", "@rsw/hey"],
+      // 同时支持字符串(string)和对象(RswCrateOptions)形式的配置
+      // https://github.com/lencx/vite-plugin-rsw/issues/8
+      // https://github.com/lencx/vite-plugin-rsw/blob/main/src/types.ts#L30
+      crates: [
+        'wasm-hey', // npm package
+        '@rsw/hey', // npm org package
+        { name: '@rsw/hello', outDir: 'custom/path' }, // 自定义输出路径
+      ],
     }),
   ],
 })
@@ -338,6 +347,19 @@ export default App
 * `npm link`命令会把包`link`到全局环境，如果在多个项目使用相同wasm包名，可能会导致报错，解决办法，在全局npm的`node_modules`中删除该包即可。推荐不同项目使用不同wasm包名避免此类异常。
 * 插件是处于Vite开发模式下运行构建，所以至少执行过一次`npm run dev`，生成`wasm`包之后，再执行`npm run build`，否则也会报错，到不到`.wasm`文件之类的。
 * 插件API可以配置需要卸载的包(仅限于之前通过插件配置`crates`中rust项目)
+* npm ERR! EEXIST: file already exists
+
+  ```bash
+  # https://docs.npmjs.com/cli/v6/commands/npm-link
+  # npm link uses the global prefix (see npm prefix -g for its value)
+  # /Users/lencx/.nvm/versions/node/v15.6.0
+  npm prefix -g
+
+  # after removing the folder, try again `npm run dev`
+  rm -rf /Users/lencx/.nvm/versions/node/v15.6.0/lib/node_modules/@rsw/chasm
+  ```
+
+  ![rsw-error-link](./img/rust_wasm_frontend-rsw-error-link.png)
 
 ### 前端
 
