@@ -506,7 +506,7 @@ wasm-pack publish
 <li>支持rust包文件热更新，监听<code>src</code>目录和<code>Cargo.toml</code>文件变更，自动构建</li>
 <li>vite启动优化，如果之前构建过，再次启动<code>npm run dev</code>，则会跳过<code>wasm-pack</code>构建</li>
 <li>通过配置<code>isLib</code>为<code>true</code>，在执行<code>npm run build</code>时会生成可发布的npm包</li>
-<li>浏览器端友好的错误提示（弹窗和浏览器控制台）</li>
+<li>友好的错误提示：浏览器端弹窗+控制台及终端命令行</li>
 </ul>
 <pre><code class="language-bash"># 在vite项目中安装
 npm i -D vite-plugin-rsw
@@ -514,7 +514,9 @@ npm i -D vite-plugin-rsw
 yarn add -D vite-plugin-rsw
 </code></pre>
 <p><img src="wasm/./img/rust_wasm_frontend-rsw-optimized.png" alt="rsw optimized" />
-<img src="wasm/./img/rust_wasm_frontend-rsw-error.png" alt="rsw error" /></p>
+<img src="wasm/./img/rust_wasm_frontend-rsw-error.png" alt="rsw error" />
+<img src="wasm/./img/rust_wasm_frontend-rsw-error-outdir.png" alt="rsw error outdir" />
+<img src="wasm/./img/rust_wasm_frontend-rsw-error-wasm-pack.png" alt="rsw error wasm-pack" /></p>
 <h3 id="5-a-hrefhttpsgithubcomlencxcreate-xc-appcreate-xc-appa"><a class="header" href="#5-a-hrefhttpsgithubcomlencxcreate-xc-appcreate-xc-appa">5. <a href="https://github.com/lencx/create-xc-app">create-xc-app</a></a></h3>
 <blockquote>
 <p>脚手架 - ⚡️在几秒钟内创建一个项目！维护了多种项目模板。</p>
@@ -580,7 +582,7 @@ wasm-pack new &lt;name&gt;
 cargo new --lib &lt;name&gt;
 </code></pre>
 <p><img src="wasm/./img/rust_wasm_frontend-wasm-pack-new.png" alt="wasm-pack new" />
-<img src="wasm/./img/rust_wasm_frontend-caro-new.png" alt="cargo new" /></p>
+<img src="wasm/./img/rust_wasm_frontend-cargo-new.png" alt="cargo new" /></p>
 <h3 id="项目配置"><a class="header" href="#项目配置">项目配置</a></h3>
 <blockquote>
 <p>以react项目为例</p>
@@ -614,7 +616,14 @@ export default defineConfig({
       // `npm link wasm-hey @rsw/hey`
       // 因为执行顺序原因，虽然上面的unLinks会把`wasm-hey`卸载
       // 但是这里会重新进行安装
-      crates: [&quot;wasm-hey&quot;, &quot;@rsw/hey&quot;],
+      // 同时支持字符串(string)和对象(RswCrateOptions)形式的配置
+      // https://github.com/lencx/vite-plugin-rsw/issues/8
+      // https://github.com/lencx/vite-plugin-rsw/blob/main/src/types.ts#L30
+      crates: [
+        'wasm-hey', // npm package
+        '@rsw/hey', // npm org package
+        { name: '@rsw/hello', outDir: 'custom/path' }, // 自定义输出路径
+      ],
     }),
   ],
 })
@@ -696,10 +705,30 @@ export default App
 <h2 id="常见问题汇总"><a class="header" href="#常见问题汇总">常见问题汇总</a></h2>
 <h3 id="rsw插件"><a class="header" href="#rsw插件">Rsw插件</a></h3>
 <ul>
-<li>插件内部是通过<code>npm link</code>的形式实现的wasm包安装，在一些极端场景下会出现，找不到依赖的安装包，导入的包不存在等错误，可以根据提示路径删除其link的文件，重新启动<code>npm run dev</code>可以解决。</li>
-<li><code>npm link</code>命令会把包<code>link</code>到全局环境，如果在多个项目使用相同wasm包名，可能会导致报错，解决办法，在全局npm的<code>node_modules</code>中删除该包即可。推荐不同项目使用不同wasm包名避免此类异常。</li>
-<li>插件是处于Vite开发模式下运行构建，所以至少执行过一次<code>npm run dev</code>，生成<code>wasm</code>包之后，再执行<code>npm run build</code>，否则也会报错，到不到<code>.wasm</code>文件之类的。</li>
-<li>插件API可以配置需要卸载的包(仅限于之前通过插件配置<code>crates</code>中rust项目)</li>
+<li>
+<p>插件内部是通过<code>npm link</code>的形式实现的wasm包安装，在一些极端场景下会出现，找不到依赖的安装包，导入的包不存在等错误，可以根据提示路径删除其link的文件，重新启动<code>npm run dev</code>可以解决。</p>
+</li>
+<li>
+<p><code>npm link</code>命令会把包<code>link</code>到全局环境，如果在多个项目使用相同wasm包名，可能会导致报错，解决办法，在全局npm的<code>node_modules</code>中删除该包即可。推荐不同项目使用不同wasm包名避免此类异常。</p>
+</li>
+<li>
+<p>插件是处于Vite开发模式下运行构建，所以至少执行过一次<code>npm run dev</code>，生成<code>wasm</code>包之后，再执行<code>npm run build</code>，否则也会报错，到不到<code>.wasm</code>文件之类的。</p>
+</li>
+<li>
+<p>插件API可以配置需要卸载的包(仅限于之前通过插件配置<code>crates</code>中rust项目)</p>
+</li>
+<li>
+<p>npm ERR! EEXIST: file already exists</p>
+<pre><code class="language-bash"># https://docs.npmjs.com/cli/v6/commands/npm-link
+# npm link uses the global prefix (see npm prefix -g for its value)
+# /Users/lencx/.nvm/versions/node/v15.6.0
+npm prefix -g
+
+# after removing the folder, try again `npm run dev`
+rm -rf /Users/lencx/.nvm/versions/node/v15.6.0/lib/node_modules/@rsw/chasm
+</code></pre>
+<p><img src="wasm/./img/rust_wasm_frontend-rsw-error-link.png" alt="rsw-error-link" /></p>
+</li>
 </ul>
 <h3 id="前端"><a class="header" href="#前端">前端</a></h3>
 <pre><code class="language-js">// init是wasm实例的初始化方法
