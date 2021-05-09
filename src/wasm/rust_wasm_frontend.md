@@ -6,7 +6,7 @@
 
 > [MDN官方文档](https://developer.mozilla.org/en-US/docs/WebAssembly)是这样给出定义
 
-`WebAssembly`(为了书写方便，简称`Wasm`)是一种新的编码方式，可以在现代的网络浏览器中运行 － 它是一种低级的类汇编语言，具有紧凑的二进制格式，可以接近原生的性能运行，并为诸如C / C ++等语言提供一个编译目标，以便它们可以在Web上运行。它也被设计为可以与JavaScript共存，允许两者一起工作。
+`WebAssembly` (为了书写方便，简称 `Wasm` )是一种新的编码方式，可以在现代的网络浏览器中运行 － 它是一种低级的类汇编语言，具有紧凑的二进制格式，可以接近原生的性能运行，并为诸如C / C ++等语言提供一个编译目标，以便它们可以在Web上运行。它也被设计为可以与JavaScript共存，允许两者一起工作。
 
 对于网络平台而言，WebAssembly具有巨大的意义——它提供了一条途径，以使得以各种语言编写的代码都可以以接近原生的速度在Web中运行。在这种情况下，以前无法以此方式运行的客户端软件都将可以运行在Web中。
 
@@ -112,15 +112,66 @@ wasm-pack pack
 wasm-pack publish
 ```
 
-### 4. [Vite](https://vitejs.dev)
+### 4. [rsw-node](https://github.com/lencx/rsw-node) - 部署时构建wasm
+
+`wasm-pack build` 在远程部署时执行，零依赖，可以安装到全局，直接使用 `rsw` 命令。也可以和 `vite-plugin-rsw` 插件配合使用
+
+```bash
+# 全局安装，执行 `rsw -h` 可查看帮助
+npm i -g rsw-node
+
+# ---------------------------------
+
+# 项目中安装 rsw
+npm i -D rsw-node
+
+# 或者
+yarn add -D rsw-node
+```
+
+**`Step1.`** 需要在项目根路径下创建 `.rswrc.json` 文件，例如
+
+```json
+{
+  "root": ".", // 默认为项目根路径，支持自定义路径，但是不可以超出项目根路径
+  "crates": [
+    "@rsw/chasm", // npm org
+    "@rsw/game-of-life", // npm org
+    { "name": "rsw-hello", "outDir": "custom/path" } // npm package，自定义输出路径
+  ]
+}
+```
+
+**`Step2.`** 当配置好 `.rswrc.json` 后，就可以在项目根路径下执行 `rsw` 命令，或者和 `vite-plugin-rsw` 配合使用，在 `package.json` 中添加如下代码。
+
+```json
+{
+  "scripts": {
+    "rsw:deploy": "rsw && npm run build"
+  },
+}
+```
+
+具体使用，可以查看 [lencx/learn-wasm](https://github.com/lencx/learn-wasm)
+
+* [.rswrc.json](https://github.com/lencx/learn-wasm/blob/main/.rswrc.json)
+* [package.json](https://github.com/lencx/learn-wasm/blob/main/package.json#L7)
+* [vite.config.ts](https://github.com/lencx/learn-wasm/blob/main/vite.config.ts#L8-L16)
+* [.github/workflows/deploy.yml](https://github.com/lencx/learn-wasm/blob/main/.github/workflows/deploy.yml)
+
+<img width="640" src="https://github.com/lencx/rsw-node/raw/main/assets/rsw-cmd.png" alt="rsw cmd" />
+<img width="640" src="https://github.com/lencx/rsw-node/raw/main/assets/rsw-deploy.png" alt="rsw debug" />
+<img width="450" src="https://github.com/lencx/rsw-node/raw/main/assets/rsw-cmd-help.png" alt="rsw cmd help" />
+
+### 5. [Vite](https://vitejs.dev)
 
 > 下一代前端工具
 
-**[vite-plugin-rsw](https://github.com/lencx/vite-plugin-rsw)：vite插件，简称`Rsw` - 集成`wasm-pack`的CLI**
+**[vite-plugin-rsw](https://github.com/lencx/vite-plugin-rsw)：vite插件，简称 `Rsw` - 集成 `wasm-pack` 的CLI**
 
-* 支持rust包文件热更新，监听`src`目录和`Cargo.toml`文件变更，自动构建
-* vite启动优化，如果之前构建过，再次启动`npm run dev`，则会跳过`wasm-pack`构建
-* 通过配置`isLib`为`true`，在执行`npm run build`时会生成可发布的npm包
+* 支持rust包文件热更新，监听 `src` 目录和 `Cargo.toml` 文件变更，自动构建
+* vite启动优化，如果之前构建过，再次启动 `npm run dev` ，则会跳过 `wasm-pack` 构建
+* 通过配置 `isLib`为`true` ，在执行 `npm run build` 时会生成可发布的npm包
 * 友好的错误提示：浏览器端弹窗+控制台及终端命令行
 
 ```bash
@@ -135,7 +186,7 @@ yarn add -D vite-plugin-rsw
 ![rsw error outdir](./img/rust_wasm_frontend-rsw-error-outdir.png)
 ![rsw error wasm-pack](./img/rust_wasm_frontend-rsw-error-wasm-pack.png)
 
-### 5. [create-xc-app](https://github.com/lencx/create-xc-app)
+### 6. [create-xc-app](https://github.com/lencx/create-xc-app)
 
 > 脚手架 - ⚡️在几秒钟内创建一个项目！维护了多种项目模板。
 
@@ -149,9 +200,9 @@ npm init xc-app
 
 ## 快速开始
 
-* 在原有`vite`项目中使用，只需安装配置`vite-plugin-rsw`插件即可。
-* 新项目可以使用`vite`提供的`@vitejs/app`初始化项目，然后安装配置`vite-plugin-rsw`。
-* 或者使用脚手架`create-xc-app`初始化项目，模板包含`wasm-react`和`wasm-vue`，会定期更新维护相关版本依赖。
+* 在原有 `vite` 项目中使用，只需安装配置 `vite-plugin-rsw` 插件即可。
+* 新项目可以使用 `vite` 提供的 `@vitejs/app` 初始化项目，然后安装配置 `vite-plugin-rsw` 。
+* 或者使用脚手架`create-xc-app`初始化项目，模板包含 `wasm-react` 和 `wasm-vue` ，会定期更新维护相关版本依赖。
 
 ### 项目结构
 
@@ -191,7 +242,7 @@ npm init xc-app
 ` ...
 ```
 
-乍一看，可能会觉得目录有点复杂，其实它就是一个标准的基于`vite`前端项目，然后，在根路径下去添加我们需要构建的wasm包(一个rust crate会对应生成一个wasm包，可单独发布到npm上)
+乍一看，可能会觉得目录有点复杂，其实它就是一个标准的基于 `vite` 前端项目，然后，在根路径下去添加我们需要构建的wasm包(一个rust crate会对应生成一个wasm包，可单独发布到npm上)
 
 ### 创建Wasm包
 
@@ -230,7 +281,7 @@ export default defineConfig({
     ViteRsw({
       // 支持开发(dev)和生产模式(release)
       // 生产模式会对wasm文件的体积进行优化
-      mode: 'release',
+      mode: 'dev',
       // 是否生成可发布的npm包，默认为`false`
       // 如果设置为`true`时，会在项目根路径下生成`libs`目录
       isLib: true,
@@ -343,10 +394,10 @@ export default App
 
 ### Rsw插件
 
-* 插件内部是通过`npm link`的形式实现的wasm包安装，在一些极端场景下会出现，找不到依赖的安装包，导入的包不存在等错误，可以根据提示路径删除其link的文件，重新启动`npm run dev`可以解决。
-* `npm link`命令会把包`link`到全局环境，如果在多个项目使用相同wasm包名，可能会导致报错，解决办法，在全局npm的`node_modules`中删除该包即可。推荐不同项目使用不同wasm包名避免此类异常。
-* 插件是处于Vite开发模式下运行构建，所以至少执行过一次`npm run dev`，生成`wasm`包之后，再执行`npm run build`，否则也会报错，到不到`.wasm`文件之类的。
-* 插件API可以配置需要卸载的包(仅限于之前通过插件配置`crates`中rust项目)
+* 插件内部是通过 `npm link` 的形式实现的wasm包安装，在一些极端场景下会出现，找不到依赖的安装包，导入的包不存在等错误，可以根据提示路径删除其link的文件，重新启动 `npm run dev` 可以解决。
+* `npm link` 命令会把包 `link` 到全局环境，如果在多个项目使用相同wasm包名，可能会导致报错，解决办法，在全局npm的`node_modules` 中删除该包即可。推荐不同项目使用不同wasm包名避免此类异常。
+* 插件是处于Vite开发模式下运行构建，所以至少执行过一次 `npm run dev` ，生成 `wasm` 包之后，再执行 `npm run build` ，否则也会报错，到不到 `.wasm` 文件之类的。
+* 插件API可以配置需要卸载的包(仅限于之前通过插件配置 `crates` 中rust项目)
 * npm ERR! EEXIST: file already exists
 
   ```bash
