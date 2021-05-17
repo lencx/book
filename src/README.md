@@ -16,6 +16,12 @@
 [![nofwl](https://img.shields.io/badge/🌐-nofwl.com-%23323031?style=flat&labelColor=323031)](https://nofwl.com)
 [![fe-cool/news](https://img.shields.io/badge/🕸-MDH%20•%20前端情报-%23323031?style=flat&labelColor=323031)](https://fe-cool.github.io/news)
 
+`微信群`
+
+关注公众号《浮之静》，发送“进群”。拉你进群一起交流：目前有 `wasm`，`flutter`，`前端`，`动漫` 群等。
+
+<p align="center"><img height="200" src="./fzj-qrcode.png" alt="fzj-qrcode" /></p>
+
 ***`Languages and Tools`***
 
 ![HTML5](https://img.shields.io/badge/-HTML5-%23E34C26?style=flat&logo=html5&logoColor=ffffff)

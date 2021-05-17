@@ -25,5 +25,8 @@
 * [Re-learning Front End](./fe/toc.md)
   * [从输入url到页面加载发生了什么？](./fe/what_happens_when.md)
 
+* [Handle](./handle/toc.md)
+  * [Mac FAQ](./handle/mac.md)
+
 <!-- * [Flutter](./flutter/toc.md)
   * [快速开始](./flutter/get_start.md) -->
