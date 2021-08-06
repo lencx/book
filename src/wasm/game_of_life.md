@@ -1,6 +1,6 @@
 # 康威生命游戏
 
-[**Demo地址**](https://wasm.nofwl.com/#/rsw/game-of-life)
+[**Demo地址**](https://wasm.lencx.tech/#/rsw/game-of-life)
 
 > [康威生命游戏（英语：Conway's Game of Life）](https://zh.wikipedia.org/wiki/康威生命游戏)，又称康威生命棋，是英国数学家约翰·何顿·康威在1970年发明的细胞自动机。
 > 它最初于1970年10月在《科学美国人》杂志上马丁·葛登能的“数学游戏”专栏出现。

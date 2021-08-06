@@ -12,8 +12,6 @@
 [![github](https://img.shields.io/badge/-lencx-%23323031?style=flat&logo=github)](https://github.com/lencx)
 [![dev.to](https://img.shields.io/badge/-lencx-%23323031?style=flat&logo=dev.to)](https://dev.to/lencx)
 [![BOOK](https://img.shields.io/badge/📖-BOOK-%23323031?style=flat&labelColor=323031)](https://lencx.github.io/book)
-[![MTC](https://img.shields.io/badge/😎-MTC-%23323031?style=flat&labelColor=323031)](https://mtc.nofwl.com)
-[![nofwl](https://img.shields.io/badge/🌐-nofwl.com-%23323031?style=flat&labelColor=323031)](https://nofwl.com)
 [![fe-cool/news](https://img.shields.io/badge/🕸-MDH%20•%20前端情报-%23323031?style=flat&labelColor=323031)](https://fe-cool.github.io/news)
 
 `微信群`
@@ -55,14 +53,7 @@
 
   <tbody>
     <tr>
-      <td><a href="https://nofwl.com">〽️ nofwl</a></td>
-      <td>my blog</td>
-      <td><img alt="Stars" src="https://img.shields.io/github/stars/lencx/nofwl?style=plastic&labelColor=373f51&color=e07a5f" /></td>
-      <td><img alt="Forks" src="https://img.shields.io/github/forks/lencx/nofwl?style=plastic&labelColor=373f51&color=e07a5f" /></td>
-      <!-- <td><img alt="Issues" src="https://img.shields.io/github/issues/lencx/nofwl?style=plastic&labelColor=373f51&color=e07a5f" /></td> -->
-    </tr>
-    <tr>
-      <td><a href="https://mtc.nofwl.com">😎 mtc</a></td>
+      <td><a href="https://mtc.nofwl.com">〽️ z</a></td>
       <td>my tools & config, and awesome lists</td>
       <td><img alt="Stars" src="https://img.shields.io/github/stars/lencx/mtc?style=plastic&labelColor=373f51&color=e07a5f" /></td>
       <td><img alt="Forks" src="https://img.shields.io/github/forks/lencx/mtc?style=plastic&labelColor=373f51&color=e07a5f" /></td>
