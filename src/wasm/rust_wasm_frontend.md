@@ -211,7 +211,7 @@ npm init mpl@latest my-app -- --type wasm
 
 * 在原有 `vite` 项目中使用，只需安装配置 `vite-plugin-rsw` 插件即可。
 * 新项目可以使用 `vite` 提供的 `@vitejs/app` 初始化项目，然后安装配置 `vite-plugin-rsw` 。
-* 或者使用脚手架 `create-xc-app` 初始化项目，模板包含 `wasm-react` 和 `wasm-vue` ，会定期更新维护相关版本依赖。
+* 或者使用脚手架 `create-mpl` 初始化项目，模板包含 `wasm-react` 和 `wasm-vue` ，会定期更新维护相关版本依赖。
 
 ### 项目结构
 
