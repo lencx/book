@@ -52,7 +52,7 @@ YaoL.in评论：`这衍生出一个很好的问题：「你如何证明技术不
 
 遇到问题，不要慌，常见的百分之八九十问题，网上都是有解决方案的。当搜索引擎都不能帮助你解决这个问题的时候，证明你遇到的问题“有点东西”了，这是好事情。需要去一些专业的技术提问社区去转转了，比如 [Stack Overflow](https://stackoverflow.com)，或者 `GitHub Issues`（主要针对开源项目），还有就是此技术相关的社区，论坛，`Slack`，`Discord`等。
 
-一个好的问题模板，例如 [vite ISSUE_TEMPLATE/bug_report](https://github.com/vitejs/vite/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) 一般包含以下几个要素：
+一个好的问题模板，例如 [vite ISSUE_TEMPLATE/bug_report](https://github.com/vitejs/vite/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml) 一般包含以下几个要素：
 
 * **问题描述**：简短的表述清楚问题，切记啰嗦。
 * **环境信息**：问题发生的环境（系统信息，软件版本，浏览器版本等）。
